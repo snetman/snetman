@@ -1,0 +1,832 @@
+/* Buttons
+-------------------------------------------------- */
+
+
+/* Links as buttons
+------------------------- */
+
+a.btn {
+    background-color: $vlt-gray;
+    color: $gray;
+    cursor: hand;
+    display: inline-block;
+    padding: .35em .75em .3em;
+    border-radius: 5px;
+    font-size: 1em;
+    line-height: 1.25em;
+    font-weight: 500;
+    font-style: normal;
+    @include transit(background-color, .2s, linear);
+    .ss-icon {
+        position: relative;
+        top: .15em;
+    }
+    &:hover {
+        background-color: $white;
+        color: $blue;
+    }
+}
+a.btn-dark {
+    @extend a.btn;
+    color: $dk-gray;
+    background-color: $lt-gray;
+}
+a.btn-blue {
+    @extend a.btn;
+    color: $white;
+    background-color: $blue;
+    &:hover {
+        background-color: $vdk-gray;
+        color: $white;
+    }
+}
+a.btn-sdark {
+  @extend a.btn;
+  color: $black;
+  background-color: $vdk-gray;
+  &:hover {
+    background-color: $dk-gray;
+    color: $white;
+  } 
+}
+a.btn-tall {
+	padding-top: .75em;
+	padding-bottom: .7em;
+}
+
+/* Button sets
+------------------------- */
+
+
+.button-set {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    // border-radius: 5px;
+    // overflow: hidden;
+    @include group;
+    li {
+        margin: 0;
+        float: left;
+        margin-right: 1px;
+        }
+    li:first-child {
+        a.btn {border-top-left-radius: 5px; border-bottom-left-radius: 5px;}
+    }
+    li:last-child {
+        margin-right: 0;
+        a.btn {border-top-right-radius: 5px; border-bottom-right-radius: 5px;}
+    }
+    a.btn {
+        border-radius: 0;
+    }
+}
+
+
+/* Reason badges
+-------------------------------------------------- */
+
+/* Reason number
+------------------------- */
+
+.reason-number {
+    font-size: 1.5em; // 24/16
+    font-weight: 700;
+    line-height: 1.25em; // 24/24
+    padding: 0;
+    color: $white;
+    b {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        width: 1em;
+        border-radius: .2em;
+        background-color: $blue;
+        text-align: center;
+        background-image: url(../img/bkg-reason-number.png);
+        background-repeat: repeat-x;
+        background-position: 50% 50%;
+        @include transit(background-color, .2s, linear);
+        &:first-child {
+            margin-right: .08333333em; /* 2px at base */
+        }
+    }
+}
+   
+/* Reason name
+------------------------- */
+
+.reason-name {
+    font-size: 1.5em; // 24/16
+    font-weight: 700;
+    color: $black;
+    display: block;
+    line-height: 1.25em; // 24/24
+    margin: 0;
+    padding: 0; // 3/24
+    @include transit(color, .2s, linear);
+    .permalink { // used on homepage and on today's poster page
+        color: $black;
+        .ss-icon {
+        	font-size: 80%;
+	    	color: $lt-gray;
+	    	@include transit(color, .2s, linear);
+	    }
+	    &:hover {
+		   .ss-icon {color: $blue;}
+	    }
+    }
+}
+
+/* Reason tagline
+------------------------- */
+
+.reason-tagline {
+  font-size: .75em; // 12/16
+  line-height: 1.25em; // 15/12
+  font-weight: 500;
+  font-style: normal;
+  display: block;
+  margin: 0;
+  padding: .5em 0 0; // 6/12
+  color: $blue;
+}
+
+/* Reason arrow
+------------------------- */
+
+.reason-arrow {
+    font-size: 1.5em; // 24/16
+    line-height: 1.25em;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    color: $lt-gray;
+    display: block;
+    @include transit(color, .2s, linear);
+    @include transit(left, .2s, ease-out);
+}
+
+
+/* Reason badge
+------------------------- */
+
+.reason-badge {
+    .reason-number {
+        float: left;
+        margin-right: .25em;
+    }
+    .reason-name {
+        float: left;
+    }
+    .reason-social {
+        clear: both;
+        font-size: .75em;
+        padding-top: 1em;
+    }
+}
+
+/* Reason logo
+------------------------- */
+
+.reason-logo {
+    display: inline-block;
+    .reason-number {
+        float: left;
+        margin-right: .25em;
+    }
+    .reason-name {
+        float: left;
+        color: $blue;
+    }
+    .reason-social {
+        clear: both;
+        font-size: .75em;
+        padding-top: 1em;
+    }
+    .reason-tagline {
+      clear: both;
+    }
+    a {
+      &:hover {
+        .reason-number b {background-color: $black;}
+        .reason-name {color: $black;}
+      }
+    }
+}
+
+/* Reason button
+------------------------- */
+
+.reason-button {
+    .reason-arrow {
+        float: left;
+        margin-right: .25em;
+        top: .125em;
+    }
+    .reason-number {
+        float: left;
+        margin-right: .25em;
+        b {
+            background-color: $gray;
+        }
+    }
+    .reason-name {
+        float: left;
+        display: none;
+        color: $gray;
+        @media screen and (min-width: 480px) {
+            display: block;
+            font-size: 1em;
+            clear: both;
+            padding: .5em 0 0 1.75em;          
+        }
+        @media screen and (min-width: 760px) {
+            clear: none;
+            margin-right: .25em;
+            padding: .1875em 0; // 3/16
+            line-height: 1.5em; // 24/16
+        }
+        @media screen and (min-width: 980px) {
+            font-size: 1.5em;
+            line-height: 1em;
+            padding: .125em 0;
+        }
+        @media screen and (min-width: 1200px) {
+            font-size: 1em;
+            padding: .1875em 0; // 3/16
+            line-height: 1.5em; // 24/16
+        }
+        @media screen and (min-width: 1600px) {
+            font-size: .8181818181em; // 18/22 Preserving size from the 1200px width
+            padding: .16666667em 0; // 3/18
+            line-height: 1.3333333em; // 24/18
+        }
+    }  
+    a {
+        display: block;
+        margin: 0;
+        padding: 1em .25em;
+        background-color: $white; // $vlt-gray;
+        @include transit(background-color, .2s, linear);
+        &:hover {
+            background-color: $white;
+            .reason-number b {background-color: $blue;}
+            .reason-name {color: $black;}
+            .reason-arrow {color: $blue; left: -.25em;}
+        }
+        @include group;       
+    }
+}
+
+/* Righty version */
+
+.reason-button-righty {
+    @extend .reason-button;
+    .reason-arrow {
+        float: right;
+        margin-right: 0;
+        margin-left: .25em;
+    }
+    .reason-number {
+        float: right;
+        margin-right: 0;
+        margin-left: .25em;
+    }
+    .reason-name {
+        float: right;
+        // overriding the settings on the default config above for righty arrows
+        @media screen and (min-width: 480px) {
+            padding: .5em 1.75em 0 0;          
+        }
+        @media screen and (min-width: 760px) {
+            float: right;
+            margin-right: 0;
+            margin-left: .25em;
+            padding: .1875em 0; // 3/16
+        }
+        @media screen and (min-width: 980px) {
+            padding: .125em 0;
+        }
+        @media screen and (min-width: 1200px) {
+            padding: .1875em 0; // 3/16
+        }
+        @media screen and (min-width: 1600px) {
+            padding: .16666667em 0; // 3/18
+        }
+    }
+    a:hover .reason-arrow {left: .25em;}
+}
+
+
+/* Page title
+-------------------------------------------------- */
+
+.page-title {
+  // any special page title styles go here.
+  padding-bottom: $gutter;
+  h1 {
+	 font-size: 1.5em; // 24/16
+	 line-height: 1.25em; // 30/24
+	 margin: 0;    
+  }
+	@media screen and (min-width: 580px){
+	  h1 {
+	   font-size: 2em; // 32/16
+	   line-height: 1.125em; // 36/32
+	   }
+	}
+}
+
+
+/* Posters
+-------------------------------------------------- */
+
+.poster {
+  margin: 0;
+  padding: 0;
+  .image {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    img {
+      display: block;
+      position: relative;
+      border: 1px solid $border-gray;
+      @include transit(all, .15s, ease-out);
+    }
+  }
+  a:hover img {
+    border-color: $blue;
+    box-shadow: 0 3px 16px rgba(0,0,0,.3);
+  }
+}
+
+
+/* Thumbnails
+------------------------- */
+
+.poster-thumb {
+  @extend .poster;
+  .caption {
+      font-size: .875em; // 14/16
+      font-weight: 500;
+      line-height: 1.14285em; // 16/14
+      padding: .75em 0;
+      border-bottom: 2px solid $lt-gray;
+      height: 2.3em;
+      .date {
+        display: block;
+        color: $dk-gray;
+        @include transit(color, .2s, linear);
+      }
+  }
+  .image {
+    max-width: 280px; // match size of image thumbnails
+    margin-left: auto;
+    margin-right: auto;
+  }
+  a:hover, a:hover .date {
+    color: $black;
+    }
+}
+
+.poster-thumb-dark {
+  @extend .poster-thumb;
+  .caption {
+    border-bottom-color: $sdk-gray;
+    .date {
+      color: $dk-gray;
+    }
+  }
+  .image {
+    img {border-color: $vdk-gray;}
+  }
+  a:hover, a:hover .date {
+    color: $white;
+  }
+}
+
+/* Blanks
+------------------------- */
+
+.poster-thumb-blank {
+  @extend .poster-thumb;
+  .image {
+    img {
+      background-color: $lt-gray;
+      border: 1px dotted $gray;
+    }
+  }
+  .caption {
+    color: $dk-gray;
+  }
+  .reason-number {
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -1em;
+    margin-top: -.6em;
+    z-index: 2;
+    b {background-color: $dk-gray;}
+  }
+}
+
+/* Poster grid
+------------------------- */
+
+.poster-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @include group;
+  li {
+    margin: 0 0 2*$gutter 0;
+    @include grid-col(5);
+  }
+  @media screen and (min-width: 480px) {
+    li {@include grid-col(2.5);}
+  }
+  @media screen and (min-width: 580px) {
+    li {@include grid-col(5/3);}
+  }  
+  @media screen and (min-width: 760px) {
+    li {@include grid-col(5/4);}
+  }
+  @media screen and (min-width: 980px) {
+    li {@include grid-col(1);}
+  }
+}
+
+.poster-grid-onerow {
+  @extend .poster-grid;
+  li {
+    &:nth-child(n) {display: none;}
+    &:nth-child(-n+3) {display:list-item;} // only show 3 items max for linear layout
+  }
+  @media screen and (min-width: 480px) {
+    li {
+      &:nth-child(n) {display: none;}
+      &:nth-child(-n+2) {display:list-item;} // only show 2 items max for 2x grid
+    }
+  }
+  @media screen and (min-width: 580px) {
+    li {
+      &:nth-child(n) {display: none;}
+      &:nth-child(-n+3) {display:list-item;} // only show 3 items max for 3x grid
+    }
+  }  
+  @media screen and (min-width: 760px) {
+    li {
+      &:nth-child(n) {display: list-item;}
+      &:last-child {display:none;} // only show 4 items max for 4x grid
+    }
+  }
+  @media screen and (min-width: 980px) {
+    li {
+      &:last-child {display: list-item;}
+    }
+  }
+
+}
+
+/* Tombstone
+-------------------------------------------------- */
+
+.tombstone {
+    font-size: .875em; // 14/16
+    background-color: $vlt-gray;
+    padding: 1.25em 1.5em 1.5em;
+    box-shadow: 0 3px 12px rgba(0,0,0,.25);
+    .title {
+      font-size: 1em; // 14/14
+      font-weight: 700;
+      line-height: 1.285em; // 18/14
+      margin-bottom: .65em;
+      color: $black;
+    }
+    .title + p {
+        text-indent: 0;
+    }
+    p {
+        font-size: 1em; // 14/14
+        text-indent: 1.5em; // 18/14
+        line-height: 1.285em;
+        margin-bottom: 2.5714em; // 36/14
+        color: $vdk-gray;
+    }
+    p + p {
+        margin-top: -2.5714em;
+    }
+    .signoff {
+        padding-top: .65em;
+        text-indent: 0;
+        color: $dk-gray;
+    }
+    .share {
+        font-size: .85714em; // 12/14
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            margin-bottom: 0;
+        }
+    }           
+}    
+
+.reason-badge + .tombstone {
+  margin-top: 2*$gutter;
+}
+
+// adjust for no-box shadow browsers
+.no-boxshadow .tombstone {
+  border-bottom: 1px solid $lt-gray;
+  border-right: 1px solid $lt-gray;
+}
+
+/* Previous / Next nav
+-------------------------------------------------- */
+
+.prev-next {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include group;
+    border: 2px solid $lt-gray;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+.prev-next > li {
+    float: left;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    @include box-size;
+    &:first-child {border-right: 2px solid $lt-gray;}
+}
+
+/* Sign-up form
+-------------------------------------------------- */
+
+#sign-up {
+  background-color: $blue;
+  color: $white;
+  text-align: center;
+  input {
+    display: inline-block;
+    width: 60%;
+  }
+  input[type="submit"] {
+	 padding: .75em 1em .8em;
+	 width: auto;
+  }
+  fieldset {
+    margin-left: auto;
+    margin-right: auto;    
+  }
+  .main {
+    @include grid-col(5);
+  }
+  @media screen and (min-width: 760px) {
+    text-align: left;
+  }  
+  @media screen and (min-width: 980px) {
+    .main {
+      @include grid-col(4);
+    }
+  }
+}
+
+
+/* Footer
+-------------------------------------------------- */
+
+#site-footer {
+    .social > ul {
+    	display: inline-block;
+        font-size: .75em;
+        margin-bottom: .75em;
+    }
+    .copyright > p {
+        font-size: .75em;
+        color: $dk-gray;
+        max-width: none; // remove the width restriction on this so it can center properly
+        padding-top: .7em;
+    }
+}
+
+/* Main navigation
+-------------------------------------------------- */
+
+.main-nav {
+    @include grid-col(5);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    max-height: none;
+    li {
+        margin: 0;
+        border-top: 1px solid $white;
+        background-color: $blue;
+        overflow: hidden;
+        &:first-child {
+          border-top-width: 0;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+        }
+        &:last-child {
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+    }
+    // add explicit bottom border radius to about because i can't rely on generic last-child anymore because
+    // that slot is taken up by the social media links, which don't appear in the mobile menu
+    #about {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    a {
+      font-weight: 400;
+      color: $white;
+      display: block;
+      padding: 1em .5*$gutter .9em;
+      background-color: transparent;
+      @include transit(all, .2s, linear);
+      @include group;
+      &:hover {
+        background-color: $vdk-gray;
+      }
+    }
+    .current a .icon, .current a .label {
+      opacity: .5;      
+    }
+    .icon {
+      display: block;
+      position: relative;
+      float: left;
+      margin-right: .5em;
+      top: 0;
+    }
+    .label {
+      font-weight: 500;
+      display: block;
+      float: left;
+    }
+    .arrow {
+      display: block;
+      float: right;
+      position: relative;
+      top: .1em;
+      opacity: .5;
+    }
+    // don't display the twitter and facebook main nav items when the nav is mobile style at the bottom since the big buttons are right there
+    #t, #fb {
+      display: none;
+      } 
+    // Here's where the nav turns into a horizontal list and moves up top
+    @media screen and (min-width: 760px) {
+      float: right; // float it right so it aligns right.
+      padding-top: .4em;
+      background-color: $white;
+      border-radius: 0;
+      li {
+        float: left;
+        border-width: 0;
+        padding-right: .6em;
+        border-right: 1px solid $lt-gray;
+        margin-right: .6em;
+        background-color: transparent;
+        &:first-child {
+          border-radius: 0;
+        }
+        &:last-child {
+          border-radius: 0;
+          border-right-width: 0;
+          margin-right: 0;
+          padding-right: 0;
+        }
+      }
+      // turn off explicit border radius for about button
+      #about {border-radius: 0;}
+      a {
+        padding: 0;
+        padding-top: .25em; // give these some padding to center the nav links vertically on the borders.
+        padding-bottom: .3em;
+        color: $blue;
+        &:hover {
+          background-color: transparent;
+          color: $black;
+        }
+      }
+      // nav highlighting
+      .icon {
+        display: none; // Hide the icons to save space
+      }
+      .arrow {
+        display: none; // Hide the arrows since they aren't band buttons
+      }      
+      .current a .icon, .current a .label {
+        color: $dk-gray;
+        opacity: 1;
+      }
+      #t, #fb {display: list-item; opacity: .8; border-width: 0; padding-right: 0;} // display the twitter and fb buttons when the nav is at the top of the screen. Don't separate them with borders or extra padding.
+    }
+    @media screen and (min-width: 980px) {
+      a {padding-bottom: .15em;} // adjust padding bottom. When icons appear, it throws off the even top bottom padding.
+      .icon {
+      	display: block; // Bring the icons back since we have room
+      	margin-right: .35em;
+      	opacity: .8; // screen them back a bit
+      }
+      a:hover .icon {opacity: 1;} // make icons full strength black on hover
+    }    
+}
+
+
+/* Nav header
+------------------------- */
+
+// The "Navigation" label that appears over the button nav
+.main-nav-header {
+  @include grid-col(5);
+  color: $vdk-gray;
+  text-indent: 5px;
+  margin-bottom: .5em;
+
+  // Hide this once the nav moves up top
+  @media screen and (min-width: 760px) {
+    display: none;
+  }
+}
+
+/* Nav jump
+------------------------- */
+
+#nav-jump {
+  @include grid-col(2);
+  margin: 0;
+  position: absolute;
+  top: .4em;
+  right: 0;
+  z-index: 2;
+  text-align: right;
+  a {
+    display: inline;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.4em;
+  }
+  .label {
+    display: none;
+  }
+  // on IE versions without media queries, always show the menu label
+  .ie7 .label, .ie8 .label {
+    display: inline;
+  }
+  @media screen and (min-width: 480px) {
+    .label {
+      display: inline;
+    }
+    .icon {
+      position: relative;
+      top: .15em;
+    }
+  }
+  // Hide this once the nav moves up top
+  @media screen and (min-width: 760px) {
+    display: none;
+  }
+}
+
+/* Previously on...
+-------------------------------------------------- */
+
+#previously-on {
+  background-color: $black;
+  header {
+    @include grid-col(5);
+    color: $gray;
+    h2 {
+      font-size: 1.5em;
+      line-height: 1.25em;
+      margin-bottom: .75em; //1em;
+    }
+  }
+  footer {
+    @include grid-col(5);
+    color: $dk-gray;
+    text-align: center;
+    h3 {
+      margin-bottom: .7em;
+    }
+    @media screen and (min-width: 580px) {
+      h3 {
+        display: inline-block;
+        margin-right: .5em;
+        margin-bottom: 0;
+      }
+    }
+  }
+} 

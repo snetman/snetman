@@ -1,0 +1,66 @@
+/* Forms
+-------------------------------------------------- */
+
+form fieldset {
+	margin: 0 0 1em 0;
+	font-size: 1em;
+	border: none;
+	padding: 0;
+	}
+form fieldset.form-actions {
+	margin: 0;
+	}
+form fieldset.form-notes {
+	margin-top: 1em;
+	}
+form fieldset.form-notes p {
+	margin-bottom: 0;
+	font-size: 80%;
+	}
+form fieldset label {
+	display: block;
+	margin: 0 0 .5em 0;
+	font-weight: 700;
+	font-style: normal;
+	}
+form fieldset input.form-text {
+	display: block;
+	padding: .75em .5em .8em;
+	font-size: 90%;
+	border: none;
+	background: #fff;
+	color: $dk-gray;
+	-webkit-box-shadow: inset 0 1px 5px rgba(0,0,0,.35);
+	-moz-box-shadow: inset 0 1px 5px rgba(0,0,0,.35);
+	box-shadow: inset 0 1px 5px rgba(0,0,0,.35);
+	border-radius: 5px;
+	width: 80%;
+	}
+form fieldset input.form-text:focus {
+	border: 1px solid #ccc;
+	background: #fff;
+	}
+form fieldset p.form-help {
+	margin: .5em 0 0 0;
+	font-size: 90%;
+	}
+form input[type="submit"] {
+  font-family: "runda", Helvetica, Arial, Helmet, Freesans, sans-serif;
+	-webkit-appearance: none;
+	border: none;
+	margin: 0;
+	padding: .5em 1em;
+	font-weight: 700;
+	font-size: 90%;
+	font-style: normal;
+	background-color: $black;
+	border-radius: 5px;
+	color: $blue;
+	@include transit(all, .2s, linear);
+	}
+form input[type="submit"]:hover,
+form input[type="submit"]:focus {
+	color: $white;
+	background-color: $sdk-gray;
+	}
+				

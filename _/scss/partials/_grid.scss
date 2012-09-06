@@ -1,0 +1,36 @@
+/* Grid system
+-------------------------------------------------- */
+
+/* Variables
+------------------------- */
+
+$columns: 5;
+$gutter: 1.4em; //22px;
+
+/* Functions
+-------------------------------------------------- */
+
+@function tr-grid-width($n) {
+  @return $n * (100% / $columns);
+}
+
+/* Rows
+------------------------- */
+
+@mixin grid-row {
+  @include group;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Cols
+------------------------- */
+
+@mixin grid-col ($cols) {
+    @include box-size;
+    float: left;
+    width: tr-grid-width($cols);
+    padding: 0 .5*$gutter;
+}
