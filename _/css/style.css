@@ -153,16 +153,83 @@ button {
   white-space: nowrap;
   overflow: hidden; }
 
-/* Typography */
+/* Webfonts
+-------------------------------------------------- */
+@font-face {
+  font-family: 'SupriaSans-Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/1ACA21_7_0.eot?#iefix") format("embedded-opentype"), url("../fonts/1ACA21_7_0.woff") format("woff"), url("../fonts/1ACA21_7_0.ttf") format("truetype"), url("../fonts/1ACA21_7_0.svg#wf") format("svg"); }
+
+@font-face {
+  font-family: 'SupriaSans-BoldItalic';
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/1ACA21_8_0.eot?#iefix") format("embedded-opentype"), url("../fonts/1ACA21_8_0.woff") format("woff"), url("../fonts/1ACA21_8_0.ttf") format("truetype"), url("../fonts/1ACA21_8_0.svg#wf") format("svg"); }
+
+/*
+@font-face {
+	font-family: 'SupriaSans-Medium';
+	font-style: normal;
+	font-weight: 500;
+	src: url('../fonts/1ACA21_2_0.eot?#iefix') format('embedded-opentype'), 
+	     url('../fonts/1ACA21_2_0.woff') format('woff'), 
+	     url('../fonts/1ACA21_2_0.ttf')  format('truetype'),
+	     url('../fonts/1ACA21_2_0.svg#wf') format('svg');
+	}
+@font-face {
+	font-family: 'SupriaSans-MediumItalic';
+	font-style: italic;
+	font-weight: 500;
+	src: url('../fonts/1ACA21_3_0.eot?#iefix') format('embedded-opentype'), 
+	     url('../fonts/1ACA21_3_0.woff') format('woff'), 
+	     url('../fonts/1ACA21_3_0.ttf')  format('truetype'),
+	     url('../fonts/1ACA21_3_0.svg#wf') format('svg');
+	}
+@font-face {
+	font-family: 'SupriaSans-Regular';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/1ACA21_1_0.eot?#iefix') format('embedded-opentype'), 
+	     url('../fonts/1ACA21_1_0.woff') format('woff'), 
+	     url('../fonts/1ACA21_1_0.ttf')  format('truetype'),
+	     url('../fonts/1ACA21_1_0.svg#wf') format('svg');
+	}
+@font-face {
+	font-family: 'SupriaSans-Italic';
+	font-style: italic;
+	font-weight: 400;
+	src: url('../fonts/1ACA21_5_0.eot?#iefix') format('embedded-opentype'), 
+	     url('../fonts/1ACA21_5_0.woff') format('woff'), 
+	     url('../fonts/1ACA21_5_0.ttf')  format('truetype'),
+	     url('../fonts/1ACA21_5_0.svg#wf') format('svg');
+	}
+*/
+@font-face {
+  font-family: 'SupriaSans-Light';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/1ACA21_4_0.eot?#iefix") format("embedded-opentype"), url("../fonts/1ACA21_4_0.woff") format("woff"), url("../fonts/1ACA21_4_0.ttf") format("truetype"), url("../fonts/1ACA21_4_0.svg#wf") format("svg"); }
+
+@font-face {
+  font-family: 'SupriaSans-LightItalic';
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/1ACA21_6_0.eot?#iefix") format("embedded-opentype"), url("../fonts/1ACA21_6_0.woff") format("woff"), url("../fonts/1ACA21_6_0.ttf") format("truetype"), url("../fonts/1ACA21_6_0.svg#wf") format("svg"); }
+
+/* Typography
+-------------------------------------------------- */
 body {
-  font-family: "runda", Helvetica, Arial, Helmet, Freesans, sans-serif;
+  font-family: 'SupriaSans-Light',Helvetica,Arial,Helmet,Freesans,sans-serif;
   font-size: 16px;
-  color: #262626;
-  background-color: white;
+  font-style: normal;
+  font-weight: 300;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  color: #222222;
+  background-color: white; }
   @media screen and (min-width: 480px) {
     body {
       /* prevent webkit from resizing text when iphone goes to landscape */
@@ -172,12 +239,17 @@ body {
       /* Restore default text-size adjust property */
       -webkit-text-size-adjust: auto; } }
 
-h1 {
-  font-size: 2em;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'SupriaSans-Bold',Helvetica,Arial,Helmet,Freesans,sans-serif;
+  font-style: normal;
   font-weight: 700;
+  color: #222222; }
+
+h1 {
+  font-size: 1.75em;
   line-height: 1.125em;
   padding: 0;
-  margin: 0; }
+  margin: 0 0 20px 0; }
 
 h2 {
   font-size: 1.25em;
@@ -238,7 +310,7 @@ strong {
   font-weight: 700; }
 
 a {
-  color: #4c98dc;
+  color: red;
   text-decoration: none;
   -webkit-transition: color 0.2s linear;
   -moz-transition: color 0.2s linear;
@@ -246,7 +318,7 @@ a {
   -o-transition: color 0.2s linear;
   transition: color 0.2s linear; }
   a:hover {
-    color: #262626; }
+    color: #222222; }
 
 /* Forms
 -------------------------------------------------- */
@@ -302,7 +374,7 @@ form input[type="submit"] {
   font-weight: 700;
   font-size: 90%;
   font-style: normal;
-  background-color: #262626;
+  background-color: #222222;
   border-radius: 5px;
   color: #4c98dc;
   -webkit-transition: all 0.2s linear;
@@ -640,7 +712,7 @@ a.btn-blue {
     color: white; }
 
 a.btn-sdark {
-  color: #262626;
+  color: #222222;
   background-color: #555555; }
   a.btn-sdark:hover {
     background-color: #888888;
@@ -715,7 +787,7 @@ a.btn-tall {
 .reason-name {
   font-size: 1.5em;
   font-weight: 700;
-  color: #262626;
+  color: #222222;
   display: block;
   line-height: 1.25em;
   margin: 0;
@@ -726,7 +798,7 @@ a.btn-tall {
   -o-transition: color 0.2s linear;
   transition: color 0.2s linear; }
   .reason-name .permalink {
-    color: #262626; }
+    color: #222222; }
     .reason-name .permalink .ss-icon {
       font-size: 80%;
       color: #dddddd;
@@ -800,9 +872,9 @@ a.btn-tall {
   .reason-logo .reason-tagline {
     clear: both; }
   .reason-logo a:hover .reason-number b {
-    background-color: #262626; }
+    background-color: #222222; }
   .reason-logo a:hover .reason-name {
-    color: #262626; }
+    color: #222222; }
 
 /* Reason button
 ------------------------- */
@@ -863,7 +935,7 @@ a.btn-tall {
     .reason-button a:hover .reason-number b, .reason-button-righty a:hover .reason-number b {
       background-color: #4c98dc; }
     .reason-button a:hover .reason-name, .reason-button-righty a:hover .reason-name {
-      color: #262626; }
+      color: #222222; }
     .reason-button a:hover .reason-arrow, .reason-button-righty a:hover .reason-arrow {
       color: #4c98dc;
       left: -0.25em; }
@@ -964,7 +1036,7 @@ a.btn-tall {
   margin-left: auto;
   margin-right: auto; }
 .poster-thumb a:hover, .poster-thumb-dark a:hover, .poster-thumb-blank a:hover, .poster-thumb a:hover .date, .poster-thumb-dark a:hover .date, .poster-thumb-blank a:hover .date {
-  color: #262626; }
+  color: #222222; }
 
 .poster-thumb-dark .caption {
   border-bottom-color: #333333; }
@@ -1084,7 +1156,7 @@ a.btn-tall {
     font-weight: 700;
     line-height: 1.285em;
     margin-bottom: .65em;
-    color: #262626; }
+    color: #222222; }
   .tombstone .title + p {
     text-indent: 0; }
   .tombstone p {
@@ -1290,7 +1362,7 @@ a.btn-tall {
         color: #4c98dc; }
         .main-nav a:hover {
           background-color: transparent;
-          color: #262626; }
+          color: #222222; }
       .main-nav .icon {
         display: none; }
       .main-nav .arrow {
@@ -1366,7 +1438,7 @@ a.btn-tall {
 /* Previously on...
 -------------------------------------------------- */
 #previously-on {
-  background-color: #262626; }
+  background-color: #222222; }
   #previously-on header {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

@@ -1,13 +1,95 @@
-/* Typography */
+/* Webfonts
+-------------------------------------------------- */
+
+@font-face {
+	font-family: 'SupriaSans-Bold';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/1ACA21_7_0.eot?#iefix') format('embedded-opentype'), 
+	     url('../fonts/1ACA21_7_0.woff') format('woff'), 
+	     url('../fonts/1ACA21_7_0.ttf')  format('truetype'),
+	     url('../fonts/1ACA21_7_0.svg#wf') format('svg');
+	}
+@font-face {
+	font-family: 'SupriaSans-BoldItalic';
+	font-style: italic;
+	font-weight: 700;
+	src: url('../fonts/1ACA21_8_0.eot?#iefix') format('embedded-opentype'), 
+	     url('../fonts/1ACA21_8_0.woff') format('woff'), 
+	     url('../fonts/1ACA21_8_0.ttf')  format('truetype'),
+	     url('../fonts/1ACA21_8_0.svg#wf') format('svg');
+	}
+/*
+@font-face {
+	font-family: 'SupriaSans-Medium';
+	font-style: normal;
+	font-weight: 500;
+	src: url('../fonts/1ACA21_2_0.eot?#iefix') format('embedded-opentype'), 
+	     url('../fonts/1ACA21_2_0.woff') format('woff'), 
+	     url('../fonts/1ACA21_2_0.ttf')  format('truetype'),
+	     url('../fonts/1ACA21_2_0.svg#wf') format('svg');
+	}
+@font-face {
+	font-family: 'SupriaSans-MediumItalic';
+	font-style: italic;
+	font-weight: 500;
+	src: url('../fonts/1ACA21_3_0.eot?#iefix') format('embedded-opentype'), 
+	     url('../fonts/1ACA21_3_0.woff') format('woff'), 
+	     url('../fonts/1ACA21_3_0.ttf')  format('truetype'),
+	     url('../fonts/1ACA21_3_0.svg#wf') format('svg');
+	}
+@font-face {
+	font-family: 'SupriaSans-Regular';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/1ACA21_1_0.eot?#iefix') format('embedded-opentype'), 
+	     url('../fonts/1ACA21_1_0.woff') format('woff'), 
+	     url('../fonts/1ACA21_1_0.ttf')  format('truetype'),
+	     url('../fonts/1ACA21_1_0.svg#wf') format('svg');
+	}
+@font-face {
+	font-family: 'SupriaSans-Italic';
+	font-style: italic;
+	font-weight: 400;
+	src: url('../fonts/1ACA21_5_0.eot?#iefix') format('embedded-opentype'), 
+	     url('../fonts/1ACA21_5_0.woff') format('woff'), 
+	     url('../fonts/1ACA21_5_0.ttf')  format('truetype'),
+	     url('../fonts/1ACA21_5_0.svg#wf') format('svg');
+	}
+*/
+@font-face {
+	font-family: 'SupriaSans-Light';
+	font-style: normal;
+	font-weight: 300;
+	src: url('../fonts/1ACA21_4_0.eot?#iefix') format('embedded-opentype'), 
+	     url('../fonts/1ACA21_4_0.woff') format('woff'), 
+	     url('../fonts/1ACA21_4_0.ttf')  format('truetype'),
+	     url('../fonts/1ACA21_4_0.svg#wf') format('svg');
+	}
+@font-face {
+	font-family: 'SupriaSans-LightItalic';
+	font-style: italic;
+	font-weight: 300;
+	src: url('../fonts/1ACA21_6_0.eot?#iefix') format('embedded-opentype'), 
+	     url('../fonts/1ACA21_6_0.woff') format('woff'), 
+	     url('../fonts/1ACA21_6_0.ttf')  format('truetype'),
+	     url('../fonts/1ACA21_6_0.svg#wf') format('svg');
+	}
+
+/* Typography
+-------------------------------------------------- */
+
 body {
-    font-family: "runda", Helvetica, Arial, Helmet, Freesans, sans-serif;
-    font-size: 16px;
-    color: $black;
-    background-color: $white;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    margin: 0;
-    padding: 0;
+	font-family: 'SupriaSans-Light',Helvetica,Arial,Helmet,Freesans,sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 300;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  color: $black;
+  background-color: $white;
 	@media screen and (min-width: 480px) {
 		/* prevent webkit from resizing text when iphone goes to landscape */
 		-webkit-text-size-adjust: 100%;	
@@ -17,14 +99,17 @@ body {
 		-webkit-text-size-adjust: auto; 	
 	}
 }
-
-
-h1 {
-  font-size: 2em; // 32/16
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'SupriaSans-Bold',Helvetica,Arial,Helmet,Freesans,sans-serif;
+  font-style: normal;
 	font-weight: 700;
-	line-height: 1.125em; // 36/32
+	color: $black;
+}
+h1 {
+  font-size: 1.75em; // 28/16
+	line-height: 1.125em; // ?
 	padding: 0;
-	margin: 0;
+	margin: 0 0 20px 0;
 }
 h2 {
 	font-size: 1.25em;
@@ -85,7 +170,7 @@ strong {
 	font-weight: 700;
 }
 a {
-    color: $blue;
+    color: $red;
     text-decoration: none;
     @include transit(color, .2s, linear);
     &:hover {
