@@ -38,6 +38,7 @@
 	     url('../fonts/1ACA21_3_0.ttf')  format('truetype'),
 	     url('../fonts/1ACA21_3_0.svg#wf') format('svg');
 	}
+*/
 @font-face {
 	font-family: 'SupriaSans-Regular';
 	font-style: normal;
@@ -47,6 +48,7 @@
 	     url('../fonts/1ACA21_1_0.ttf')  format('truetype'),
 	     url('../fonts/1ACA21_1_0.svg#wf') format('svg');
 	}
+	
 @font-face {
 	font-family: 'SupriaSans-Italic';
 	font-style: italic;
@@ -56,7 +58,7 @@
 	     url('../fonts/1ACA21_5_0.ttf')  format('truetype'),
 	     url('../fonts/1ACA21_5_0.svg#wf') format('svg');
 	}
-*/
+
 @font-face {
 	font-family: 'SupriaSans-Light';
 	font-style: normal;
@@ -80,15 +82,16 @@
 -------------------------------------------------- */
 
 body {
-	font-family: 'SupriaSans-Light',Helvetica,Arial,Helmet,Freesans,sans-serif;
+	font-family: 'SupriaSans-Regular','SupriaSans-Light',Helvetica,Arial,Helmet,Freesans,sans-serif;
 	font-size: 16px;
 	font-style: normal;
-	font-weight: 300;
+	// font-weight: 300; // for the "light" weight if I go back to it for body text
+	font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
-  color: $black;
+  color: $dk-gray;
   background-color: $white;
 	@media screen and (min-width: 480px) {
 		/* prevent webkit from resizing text when iphone goes to landscape */
@@ -107,37 +110,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
   font-size: 1.75em; // 28/16
-	line-height: 1.125em; // ?
+	line-height: 1.1785em; // 33/28
 	padding: 0;
-	margin: 0 0 20px 0;
+	margin: 0 0 .785714em 0; // 22/28
 }
 h2 {
-	font-size: 1.25em;
-	font-weight: 700;
-	font-style: normal;
-	line-height: 1.4em;
+	font-size: 1.25em; // 20/16
+	line-height: 1.1em; // 22/20
 	padding: 0;
-	margin: 0 0 .35em 0;
+	margin: 0;
+	margin-bottom: .55em; // 11/20
+}
+p + h2 {
+  margin-top: 1.65em; // 33/20
 }
 h3 {
 	font-size: 1em;
-	font-weight: 700;
 	font-style: normal;
-	line-height: 1.4em;
+	line-height: 1.375em; // 22/16
 	padding: 0;
 	margin: 0;
 	}
 h4 {
+  font-family: 'SupriaSans-Italic',Helvetica,Arial,Helmet,Freesans,sans-serif;
 	font-size: 1em;
-	font-weight: 400;
-	font-style: italic;
-	line-height: 140%;
+	line-height: 1.375em;
 	padding: 0;
 	margin: 0;
 	}
 p {
     font-size: 1em;
-    line-height: 1.4em;
+    line-height: 1.375em; // 22/16
     padding: 0;
     margin: 0 0 1.4em 0;
     max-width: 45em;
@@ -150,18 +153,17 @@ ul {
 	margin-bottom: 1.3em;
 	}
 ol	{
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 	padding-left: 1.3em;
 	margin-bottom: 1.3em;
 	}
 li {
-    padding: 0;
-    margin: 0;
-	margin-bottom: .5em;
+  padding: 0;
+  margin: 0;
 	}
 blockquote {
-    margin: 0;
+  margin: 0;
 	padding: 0 .75em;
 	border-left: 3px solid #e5e3e0;
 	font-style: italic;

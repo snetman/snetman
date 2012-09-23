@@ -2,10 +2,10 @@
 -------------------------------------------------- */
 body {
   @media screen and (min-width: 1280px) {
-    font-size: 18px;
+    font-size: 20px;
   }
   @media screen and (min-width: 1600px) {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 
@@ -16,39 +16,17 @@ body {
   @include grid-row;
 }
 
-/* Site header
+/* Project header
 -------------------------------------------------- */
 
-#site-header {
-    position: relative;
-    padding: $gutter .5*$gutter;
-    
-    // The logo container
-    #logo {
-      @include grid-col(4.5);
-      z-index: 3;
-    }
-    @media screen and (min-width: 580px) {
-      padding-left: 1.5*$gutter;
-      padding-right: 1.5*$gutter;
-    }
-    @media screen and (min-width: 760px) {
-      padding-bottom: 2*$gutter;
-      // Logo
-      #logo {
-        @include grid-col(3);
-      }
-    }
-    @media screen and (min-width: 980px) {
-      padding-left: 2.5*$gutter;
-      padding-right: 2.5*$gutter;
-    }
-    @media screen and (min-width: 1200px) {
-      padding-left: 3.5*$gutter;
-      padding-right: 3.5*$gutter;
-    }
-   
+#project-header {
+  @include grid-row;
 }
+
+.project-hero-image {
+  @include grid-col(5);
+}
+
 
 
 /* Content
@@ -113,129 +91,3 @@ body {
     }
 }
 
-/* Pagination */
-
-.pagination {
-    margin-top: 2.8em; // keeps this away from the main and sidebar columns above
-    @include grid-col(5);
-    
-    @media screen and (min-width: 1200px) {
-      @include grid-col(2.5);
-    }
-}
-
-/* Sign-up form
--------------------------------------------------- */
-
-#sign-up {
-    padding: $gutter .5*$gutter;
-    margin-bottom: $gutter;    
-    @media screen and (min-width: 580px) {
-      padding-left: 1.5*$gutter;
-      padding-right: 1.5*$gutter;
-    }
-    @media screen and (min-width: 760px) {
-      // padding: $gutter;
-    }
-    @media screen and (min-width: 980px) {
-      padding-left: 2.5*$gutter;
-      padding-right: 2.5*$gutter;
-    }
-    @media screen and (min-width: 1200px) {
-      padding-left: 3.5*$gutter;
-      padding-right: 3.5*$gutter;
-    }
-    .main {
-      padding-bottom: .5*$gutter;
-    }
-}
-
-/* Site footer
--------------------------------------------------- */
-
-#site-footer {
-    padding: $gutter .5*$gutter 2*$gutter;
-    text-align: center;    
-    // The social buttons
-    .social {
-      @include grid-col(5);
-    }
-    // The copyright
-    .copyright {
-      @include grid-col(5);
-    }
-    @media screen and (min-width: 580px) {
-      padding-left: 1.5*$gutter;
-      padding-right: 1.5*$gutter;
-    }
-    @media screen and (min-width: 760px) {
-      text-align: left;
-      .social {
-	      @include grid-col(2.5);
-      }
-      .copyright {
-      	  text-align: right;
-	      @include grid-col(2.5);
-      }
-    }
-    @media screen and (min-width: 980px) {
-      padding-left: 2.5*$gutter;
-      padding-right: 2.5*$gutter;
-    }
-    @media screen and (min-width: 1200px) {
-      padding-left: 3.5*$gutter;
-      padding-right: 3.5*$gutter;
-    }
-}
-
-
-/* Site Navigation
--------------------------------------------------- */
-
-#site-nav {
-  padding: 0 .5*$gutter 2*$gutter;
-
-  @media screen and (min-width: 580px) {
-    padding-left: 1.5*$gutter;
-    padding-right: 1.5*$gutter;
-  }
-  // Here's where it moves up top
-  @media screen and (min-width: 760px) {
-    position: absolute;
-    top: .85*$gutter; // help it to align with the logo baseline
-    right: .5*$gutter;
-    padding-bottom: 0;
-  }
-  @media screen and (min-width: 980px) {
-    padding-left: 2.5*$gutter;
-    padding-right: 2.5*$gutter;
-  }
-  @media screen and (min-width: 1200px) {
-    padding-left: 3.5*$gutter;
-    padding-right: 3.5*$gutter;
-  }
-
-}
-
-/* Previously on...
--------------------------------------------------- */
-
-#previously-on {
-    padding: 1.5*$gutter .5*$gutter 2*$gutter ;
-    //margin-bottom: $gutter;    
-    @media screen and (min-width: 580px) {
-      padding-left: 1.5*$gutter;
-      padding-right: 1.5*$gutter;
-    }
-    @media screen and (min-width: 760px) {
-      // padding: $gutter;
-    }
-    @media screen and (min-width: 980px) {
-      padding-left: 2.5*$gutter;
-      padding-right: 2.5*$gutter;
-    }
-    @media screen and (min-width: 1200px) {
-      padding-left: 3.5*$gutter;
-      padding-right: 3.5*$gutter;
-    }
-}
